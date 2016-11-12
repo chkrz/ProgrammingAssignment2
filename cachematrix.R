@@ -1,8 +1,8 @@
 ## The first function, makeCacheVector creates a special "matrix", which is really a list containing a function to
 ##1.set the value of the matrix
 ##2.get the value of the matrix
-##3.set the value of the inverse
-##4.get the value of the inverse
+##3.set the value of the inv
+##4.get the value of the inv
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
         return(inv)
     }
     data <- x$get()
-    inv <- solve(data)
+    inv <- solve(data,...)
     x$setinverse(inv)
     inv
 }
